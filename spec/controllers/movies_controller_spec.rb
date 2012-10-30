@@ -10,16 +10,19 @@ describe MoviesController do
         and_return(@fake_results)
       post :similar, {:director => 'Ridley Scott'}
     end
-    it 'should select the Same Director template for rendering' do
-      Movie.stub(:find_similar).and_return(@fake_results)
-      post :similar, {:director => 'Ridley Scott'}
-      response.should render_template('similar')
-    end
 
-    it 'should make the search results available to that template' do
-      Movie.stub(:find_similar).and_return(@fake_results)
-      post :similar, {:director => 'Ridley Scott'}
-      assigns(:movies).should == @fake_results
+    describe 'after valid search' do
+      before :each do
+        Movie.stub(:find_similar).and_return(@fake_results)
+        post :similar, {:director => 'Ridley Scott'}
+      end
+      it 'should select the Same Director template for rendering' do
+        response.should render_template('similar')
+      end
+
+      it 'should make the search results available to that template' do
+        assigns(:movies).should == @fake_results
+      end
     end
   end
 end
