@@ -17,7 +17,9 @@ describe MoviesController do
     end
 
     it 'should make the search results available to that template' do
-      flunk 'no search results yet'
+      Movie.stub(:find_similar).and_return(@fake_results)
+      post :similar, {:director => 'Ridley Scott'}
+      assigns(:movies).should == @fake_results
     end
   end
 end
