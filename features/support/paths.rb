@@ -25,6 +25,9 @@ module NavigationHelpers
     when /^the details page for "Star Wars"$/
       '/movies/1'
 
+    when /^the Similar Movies page for "Star Wars"$/
+      '/movies/similar/George%20Lucas'
+
     when /^the details page for "Alien"$/
       '/movies/3'
 
