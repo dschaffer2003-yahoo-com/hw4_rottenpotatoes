@@ -24,10 +24,10 @@ RSpec:
     - 
     - 
     - 1
-    - 0
-    - 0
-    - 0
-    - 0
+    - 3
+    - 3
+    - 3
+    - 3
     - 0
     - 
     - 0
@@ -99,10 +99,10 @@ RSpec:
     - 0
     - 
     - 1
-    - 1
+    - 0
     - 
     - 
-  :created_at: 2012-11-01 02:41:57.928253 -00:00
+  :created_at: 2012-11-01 03:49:06.994105 -00:00
 Cucumber Features: 
   :original_result: 
     /home/ubuntu/hw4_rottenpotatoes/app/controllers/application_controller.rb: 
