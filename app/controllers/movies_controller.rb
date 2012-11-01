@@ -6,7 +6,6 @@ class MoviesController < ApplicationController
     # will render app/views/movies/show.<extension> by default
   end
   def similar
-    debugger
     movie = Movie.find(params[:id])
     if movie.director == ''
       flash[:notice] = "'#{movie.title}' has no director info"
