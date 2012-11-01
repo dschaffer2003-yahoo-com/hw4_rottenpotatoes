@@ -7,7 +7,7 @@ Rottenpotatoes::Application.routes.draw do
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
-  match ':controller/similar/:director' => 'movies#similar', :as => :movies_similar
+  match ':controller/similar/:id' => 'movies#similar', :as => :movies_similar
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
